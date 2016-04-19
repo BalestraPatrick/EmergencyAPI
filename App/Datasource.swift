@@ -21,9 +21,14 @@ extension Country {
 
 class DataSource {
     
-    static let source = [Country(name: "Switzerland", code: "CH", police: 120, medical: 0, fire: 0).self,
-                         Country(name: "", code: "", police: 0, medical: 0, fire: 0).self,
-                         Country(name: "", code: "", police: 0, medical: 0, fire: 0).self,
-                         Country(name: "", code: "", police: 0, medical: 0, fire: 0).self]
+    let source = [Country(name: "Switzerland", code: "CH", police: 120, medical: 0, fire: 0).self,
+                  Country(name: "", code: "", police: 0, medical: 0, fire: 0).self,
+                  Country(name: "", code: "", police: 0, medical: 0, fire: 0).self,
+                  Country(name: "", code: "", police: 0, medical: 0, fire: 0).self]
+    
+    func toResponse() -> ResponseRepresentable {
+        return Json(["version" : 0.1,])
+//                     "content" : [source[index: 0].toResponse()]])
+    }
     
 }

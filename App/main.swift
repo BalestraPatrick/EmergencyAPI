@@ -31,7 +31,7 @@ app.get("/") { request in
     parameter: 2-digit country code
 */
 app.get("country", String.self) { request, countryCode in
-    let country = DataSource.source.filter { $0.code == countryCode }
+    let country = DataSource().source.filter { $0.code == countryCode }
     guard let result = country.first else {
         return Json(["error": "No country found with the given 2-digit country code \(countryCode)"])
     }
