@@ -45,7 +45,7 @@ Perform a GET request in this format `/country/{2-digit country code}` by passin
 ```JSON
 {"error": "No country found with the given 2-digit country code CHH"}
 ```
-If the request is succesffull, the response is something like this:
+If the request is succesfful, the response is something like this:
 
 ```JSON
 {
@@ -62,6 +62,9 @@ Performs a GET request in this format `/images/{2-digit country code}.pdf` by pa
 
 ## Implementation
 This project is based on the great web framework for Swift [Vapor](https://github.com/qutheory/vapor/).
+
+## Contribution
+If you find any mistakes in the list of emergency phone numbers or you would like to add any new country, feel free to open a [Pull Request](https://github.com/BalestraPatrick/EmergencyAPI/pull/new/master) 👏🏻
 
 ## Contact
 
