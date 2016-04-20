@@ -1,5 +1,5 @@
 # EmergencyAPI
-An API written in Swift for the world emergency phone numbers. The API is visible here: [http://emergency-phone-numbers.herokuapp.com/](http://emergency-phone-numbers.herokuapp.com/public/au.pdf)
+An API written in Swift for the world emergency phone numbers. The API is visible here: [http://emergency-phone-numbers.herokuapp.com/](http://emergency-phone-numbers.herokuapp.com/)
 
 ## Usage
 The API is used to perform the following operations:
