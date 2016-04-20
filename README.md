@@ -5,8 +5,8 @@ An API written in Swift for the world emergency phone numbers. The API is visibl
 The API is used to perform the following operations:
 
 - Request all the available countries data
-- Request a specific country data given the 2-digit country code (such as US for United States, CH for Switzerland, etc.)
-- Request the flag image given the 2-digit country code.
+- Request a specific country data given the 2-letter country code (such as US for United States, CH for Switzerland, etc.)
+- Request the flag image given the 2-letter country code.
 
 ### Documentation
 #### GET /
@@ -34,16 +34,16 @@ The `version` value is a number representing the current version of the data. Mo
 The `content` value is an array of dictionaries containing the country data: 
 
 - `name`: name of the country
-- `code`: 2-digit country code
+- `code`: 2-letter country code
 - `fire`: firefighters phone number
 - `police`: police phone number
 - `medical`: medical phone number
 
 ### GET /country/
-Perform a GET request in this format `/country/{2-digit country code}` by passing a valid country code to receive the emergency phone numbers for the specified country. If the country code is not found in the database, the API returns an error like this:
+Perform a GET request in this format `/country/{2-letter country code}` by passing a valid country code ([ISO 3166-1 alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)) to receive the emergency phone numbers for the specified country. If the country code is not found in the database, the API returns an error like this:
 
 ```JSON
-{"error": "No country found with the given 2-digit country code CHH"}
+{"error": "No country found with the given 2-letter country code CHH"}
 ```
 If the request is succesfful, the response is something like this:
 
@@ -58,7 +58,7 @@ If the request is succesfful, the response is something like this:
 ```
 
 ### GET/images/
-Performs a GET request in this format `/images/{2-digit country code}.pdf` by passing a valid country code to receive the flag image for the specified country. The request `/images/CH.pdf` will return the Switzerland flag for example.
+Performs a GET request in this format `/images/{2-letter country code}.pdf` by passing a valid country code to receive the flag image for the specified country. The request `/images/CH.pdf` will return the Switzerland flag for example.
 
 ## Implementation
 This project is based on the great web framework for Swift [Vapor](https://github.com/qutheory/vapor/).
