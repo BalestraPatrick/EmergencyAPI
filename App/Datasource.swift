@@ -9,8 +9,9 @@ struct Country {
     let fire: Int
 }
 
-extension Country {
-    func toResponse() -> ResponseRepresentable {
+extension Country: JsonRepresentable {
+    
+    func makeJson() -> Json {
         return Json(["name": name,
                      "code": code,
                      "police": police,
@@ -19,13 +20,24 @@ extension Country {
     }
 }
 
-class DataSource {
+class DataSource: JsonRepresentable {
     
-    func toResponse() -> ResponseRepresentable {
-        return Json(["version" : 0.1,])
-        //                     "content" : [source[index: 0].toResponse()]])
+    
+    func makeJson() -> Json {
+        let content = DataSource().source.map { $0.makeJson() }
+        return Json.object(["version" : Json(APIVersion), "content": Json.array(content)])
     }
     
+    func getCountryWithID(countryCode: String) -> Json {
+        let country = source.filter { $0.code == countryCode }
+        guard let result = country.first else {
+            return Json(["error": "No country found with the given 2-digit country code \(countryCode)"])
+        }
+        return result.makeJson()
+    }
+
+    let APIVersion = 0.1
+
     let source = [Country(name: "Afghanistan", code: "AF", police: 120, medical: 0, fire: 0).self,
                   Country(name: "Albania", code: "AL", police: 0, medical: 0, fire: 0).self,
                   Country(name: "Algeria", code: "DZ", police: 0, medical: 0, fire: 0).self,
