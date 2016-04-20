@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE5A4AAE1CC80CB000EEAC98 /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A4AAD1CC80CB000EEAC98 /* Datasource.swift */; };
 		C3DBDBA01CB5FF450077DB3A /* libC7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_C7" /* libC7.dylib */; };
 		C3DBDBA11CB5FF450077DB3A /* libC7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_C7" /* libC7.dylib */; };
 		C3DBDBA21CB5FF450077DB3A /* libC7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_C7" /* libC7.dylib */; };
@@ -125,9 +126,6 @@
 		_LinkFileRef_Vapor /* libVapor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Vapor" /* libVapor.dylib */; };
 		_LinkFileRef_VaporZewoMustache /* libVaporZewoMustache.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_VaporZewoMustache" /* libVaporZewoMustache.dylib */; };
 		_LinkFileRef_libc /* liblibc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_libc" /* liblibc.dylib */; };
-		__src_cc_ref_App/Controllers/UserController.swift /* Controllers/UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_App/Controllers/UserController.swift /* Controllers/UserController.swift */; };
-		__src_cc_ref_App/Middleware/SampleMiddleware.swift /* Middleware/SampleMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_App/Middleware/SampleMiddleware.swift /* Middleware/SampleMiddleware.swift */; };
-		__src_cc_ref_App/Models/User.swift /* Models/User.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_App/Models/User.swift /* Models/User.swift */; };
 		__src_cc_ref_App/main.swift /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_App/main.swift /* main.swift */; };
 		"__src_cc_ref_Packages/C7-0.2.0/Sources/AsyncStream.swift" /* AsyncStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/C7-0.2.0/Sources/AsyncStream.swift" /* AsyncStream.swift */; };
 		"__src_cc_ref_Packages/C7-0.2.0/Sources/AsyncStreamClient.swift" /* AsyncStreamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/C7-0.2.0/Sources/AsyncStreamClient.swift" /* AsyncStreamClient.swift */; };
@@ -422,11 +420,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		__PBXFileRef_App/Controllers/UserController.swift /* Controllers/UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controllers/UserController.swift; sourceTree = "<group>"; };
-		__PBXFileRef_App/Middleware/SampleMiddleware.swift /* Middleware/SampleMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware/SampleMiddleware.swift; sourceTree = "<group>"; };
-		__PBXFileRef_App/Models/User.swift /* Models/User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		AE5A4AAD1CC80CB000EEAC98 /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		__PBXFileRef_App/main.swift /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = /Users/tanner/Developer/vapor/example/Package.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/C7-0.2.0/Sources/AsyncStream.swift" /* AsyncStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStream.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/C7-0.2.0/Sources/AsyncStreamClient.swift" /* AsyncStreamClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamClient.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/C7-0.2.0/Sources/AsyncStreamServer.swift" /* AsyncStreamServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncStreamServer.swift; sourceTree = "<group>"; };
@@ -924,7 +919,6 @@
 		"___RootGroup_" = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Package.swift /* Package.swift */,
 				"_____Sources_" /* Sources */,
 				"_______Tests_" /* Tests */,
 				"____Products_" /* Products */,
@@ -988,9 +982,7 @@
 			isa = PBXGroup;
 			children = (
 				__PBXFileRef_App/main.swift /* main.swift */,
-				__PBXFileRef_App/Controllers/UserController.swift /* Controllers/UserController.swift */,
-				__PBXFileRef_App/Middleware/SampleMiddleware.swift /* Middleware/SampleMiddleware.swift */,
-				__PBXFileRef_App/Models/User.swift /* Models/User.swift */,
+				AE5A4AAD1CC80CB000EEAC98 /* Datasource.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1896,10 +1888,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				AE5A4AAE1CC80CB000EEAC98 /* Datasource.swift in Sources */,
 				__src_cc_ref_App/main.swift /* main.swift in Sources */,
-				__src_cc_ref_App/Controllers/UserController.swift /* Controllers/UserController.swift in Sources */,
-				__src_cc_ref_App/Middleware/SampleMiddleware.swift /* Middleware/SampleMiddleware.swift in Sources */,
-				__src_cc_ref_App/Models/User.swift /* Models/User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
