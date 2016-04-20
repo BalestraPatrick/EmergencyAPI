@@ -9,20 +9,11 @@ let app = Application()
     country: name, code, police, medical, fire
 */
 app.get("/") { request in
+    let first: ResponseRepresentable = DataSource().source.first!.toResponse()
+    print(first)
     return Json([
                     "version": 0.1,
-                    "content": [
-                                   ["country": "Switzerland",
-                                    "code": "CH",
-                                    "police": 112,
-                                    "medical": 144,
-                                    "fire": 118],
-                                   ["name": "Switzerland",
-                                    "code": "CH",
-                                    "police": 112,
-                                    "medical": 144,
-                                    "fire": 118]
-        ]
+                    "content": first
     ])
 }
 
@@ -38,4 +29,4 @@ app.get("country", String.self) { request, countryCode in
     return result.toResponse()
 }
 
-app.start(port: 8059)
+app.start(port: 8060)
