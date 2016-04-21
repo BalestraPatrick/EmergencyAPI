@@ -31,14 +31,14 @@ class DataSource: JsonRepresentable {
     func getCountryWithID(countryCode: String) -> Json {
         let country = source.filter { $0.code == countryCode }
         guard let result = country.first else {
-            return Json(["error": "No country found with the given 2-digit country code \(countryCode)"])
+            return Json(["error": "No country found with the given 2-letter country code \(countryCode)"])
         }
         return result.makeJson()
     }
 
     let APIVersion = 0.1
 
-    let source = [Country(name: "Afghanistan", code: "AF", police: 120, medical: 0, fire: 119).self,
+    let source = [Country(name: "Afghanistan", code: "AF", police: 0, medical: 102, fire: 119).self,
                   Country(name: "Albania", code: "AL", police: 0, medical: 0, fire: 128).self,
                   Country(name: "Algeria", code: "DZ", police: 0, medical: 0, fire: 14).self,
                   Country(name: "Argentina", code: "AR", police: 0, medical: 0, fire: 100).self,
