@@ -27,7 +27,8 @@ By performing a GET request directly to the base URL, you will receive a JSON fi
 	 		 "code":"IT",
 	 		 "police":112,
 	 		 "medical":118,
-	 		 "fire":115}
+	 		 "fire":115
+	 		 }
 	 		],
  "version":0.1
 }
