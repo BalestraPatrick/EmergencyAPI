@@ -15,16 +15,19 @@ By performing a GET request directly to the base URL, you will receive a JSON fi
 ```JSON
 {
  "content":[
-			{"code":"CH",
-	 		 "fire":118,
+			{
+			 "name":"Switzerland",
+			 "code":"CH",
+			 "police":112,
+	 		 "medical":144,
+	 		 "fire":118
+	  	 	},
+	 		{
+	 		 "name":"Italy",
+	 		 "code":"IT",
 	 		 "police":112,
-	 		 "country":"Switzerland",
-	  	 	 "medical":144},
-	 		{"code":"CH",
-	 		 "fire":118,
-	 		 "police":112,
-	 		 "name":"Switzerland",
-	 		 "medical":144}
+	 		 "medical":118,
+	 		 "fire":115}
 	 		],
  "version":0.1
 }
