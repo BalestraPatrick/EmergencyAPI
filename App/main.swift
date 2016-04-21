@@ -15,7 +15,7 @@ app.get("/") { request in
     parameter: 2-letter country code
 */
 app.get("country", String.self) { request, countryCode in
-    return DataSource().getCountryWithID(countryCode.uppercased())
+    return DataSource().getCountryWithID(countryCode)
 }
 
-app.start(port: 8062)
+app.start(port: 8080)

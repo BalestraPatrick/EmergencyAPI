@@ -29,7 +29,8 @@ class DataSource: JsonRepresentable {
     }
     
     func getCountryWithID(countryCode: String) -> Json {
-        let country = source.filter { $0.code == countryCode }
+        let uppercasedCountryCode = countryCode.uppercased()
+        let country = source.filter { $0.code == uppercasedCountryCode }
         guard let result = country.first else {
             return Json(["error": "No country found with the given 2-letter country code \(countryCode)"])
         }
