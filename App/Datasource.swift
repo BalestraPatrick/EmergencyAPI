@@ -22,7 +22,6 @@ extension Country: JsonRepresentable {
 
 class DataSource: JsonRepresentable {
     
-    
     func makeJson() -> Json {
         let content = DataSource().source.map { $0.makeJson() }
         return Json.object(["version" : Json(APIVersion), "content": Json.array(content)])
