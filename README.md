@@ -18,16 +18,16 @@ By performing a GET request directly to the base URL, you will receive a JSON fi
 			{
 			 "name":"Switzerland",
 			 "code":"CH",
-			 "police":112,
-	 		 "medical":144,
-	 		 "fire":118
+			 "police":"112",
+	 		 "medical":"144",
+	 		 "fire":"118"
 	  	 	},
 	 		{
 	 		 "name":"Italy",
 	 		 "code":"IT",
-	 		 "police":112,
-	 		 "medical":118,
-	 		 "fire":115
+	 		 "police":"112",
+	 		 "medical":"118",
+	 		 "fire":"115"
 	 		 }
 	 		],
  "version":0.1
@@ -53,11 +53,11 @@ If the request is succesfful, the response is something like this:
 
 ```JSON
 {
-"code":"CH",
-"fire":0,
-"police":120,
-"name":"Switzerland",
-"medical":0
+ "code":"CH",
+ "fire":"118",
+ "police":"112",
+ "name":"Switzerland",
+ "medical":"144"
 }
 ```
 
