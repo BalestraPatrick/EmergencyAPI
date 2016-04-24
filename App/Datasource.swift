@@ -36,7 +36,7 @@ class DataSource: JsonRepresentable {
         return result.makeJson()
     }
 
-    let APIVersion = 0.1
+    let APIVersion = 0.2
 
     let source = [Country(name: "Afghanistan", code: "AF", police: "119", medical: "102", fire: "119").self,
                   Country(name: "Albania", code: "AL", police: "129", medical: "127", fire: "128").self,
@@ -117,7 +117,7 @@ class DataSource: JsonRepresentable {
                   Country(name: "Monaco", code: "MC", police: "102", medical: "103", fire: "101").self,
                   Country(name: "Mongolia", code: "MN", police: "112", medical: "112", fire: "112").self,
                   Country(name: "Montenegro", code: "ME", police: "19", medical: "15", fire: "15").self,
-                  Country(name: "Morocco", code: "MA", police: "191", medical: "191", fire: "191").self,
+                  Country(name: "Morocco", code: "MA", police: "19", medical: "15", fire: "15").self,
                   Country(name: "Myanmar", code: "MM", police: "100", medical: "102", fire: "101").self,
                   Country(name: "Nepal", code: "NP", police: "112", medical: "112", fire: "112").self,
                   Country(name: "Netherlands", code: "NL", police: "112", medical: "112", fire: "112").self,
