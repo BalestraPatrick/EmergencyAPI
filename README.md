@@ -62,7 +62,7 @@ If the request is succesfful, the response is something like this:
 ```
 
 ### GET/images/
-Performs a GET request in this format `/images/{2-letter country code}.pdf` by passing a valid country code to receive the flag image for the specified country. The request `/images/CH.pdf` will return the Switzerland flag for example.
+Performs a GET request in this format `/images/{2-letter country code}.jpg` by passing a valid country code to receive the flag image for the specified country. The request `/images/CH.jpg` will return the Switzerland flag for example.
 
 ## Implementation
 This project is based on the great web framework for Swift [Vapor](https://github.com/qutheory/vapor/).
